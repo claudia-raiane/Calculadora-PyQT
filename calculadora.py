@@ -1,6 +1,4 @@
-
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_Calculadora(object):
     def setupUi(self, Calculadora):
@@ -9,7 +7,8 @@ class Ui_Calculadora(object):
         Calculadora.setMinimumSize(QtCore.QSize(338, 408))
         Calculadora.setMaximumSize(QtCore.QSize(384, 569))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/newPrefix/9165696_calculator_math_icon (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/newPrefix/9165696_calculator_math_icon (1).png"), QtGui.QIcon.Normal,
+                       QtGui.QIcon.Off)
         Calculadora.setWindowIcon(icon)
         Calculadora.setStyleSheet("background-color: rgb(170, 170, 255);")
         self.centralwidget = QtWidgets.QWidget(Calculadora)
@@ -25,7 +24,7 @@ class Ui_Calculadora(object):
         sizePolicy.setHeightForWidth(self.botao_dividir.sizePolicy().hasHeightForWidth())
         self.botao_dividir.setSizePolicy(sizePolicy)
         self.botao_dividir.setStyleSheet("font: 75 14pt \"Times New Roman\";\n"
-"background-color: rgb(85, 85, 255);")
+                                         "background-color: rgb(85, 85, 255);")
         self.botao_dividir.setObjectName("botao_dividir")
         self.gridLayout.addWidget(self.botao_dividir, 4, 3, 1, 1)
         self.botao_desligar = QtWidgets.QPushButton(self.centralwidget)
@@ -66,7 +65,7 @@ class Ui_Calculadora(object):
         sizePolicy.setHeightForWidth(self.botao_multiplicar.sizePolicy().hasHeightForWidth())
         self.botao_multiplicar.setSizePolicy(sizePolicy)
         self.botao_multiplicar.setStyleSheet("font: 75 14pt \"Times New Roman\";\n"
-"background-color: rgb(85, 85, 255);")
+                                             "background-color: rgb(85, 85, 255);")
         self.botao_multiplicar.setObjectName("botao_multiplicar")
         self.gridLayout.addWidget(self.botao_multiplicar, 3, 3, 1, 1)
         self.botao_ligar = QtWidgets.QPushButton(self.centralwidget)
@@ -98,7 +97,7 @@ class Ui_Calculadora(object):
         sizePolicy.setHeightForWidth(self.botao_subtrair.sizePolicy().hasHeightForWidth())
         self.botao_subtrair.setSizePolicy(sizePolicy)
         self.botao_subtrair.setStyleSheet("font: 75 14pt \"Times New Roman\";\n"
-"background-color: rgb(85, 85, 255);")
+                                          "background-color: rgb(85, 85, 255);")
         self.botao_subtrair.setObjectName("botao_subtrair")
         self.gridLayout.addWidget(self.botao_subtrair, 2, 3, 1, 1)
         self.botao_7 = QtWidgets.QPushButton(self.centralwidget)
@@ -144,7 +143,7 @@ class Ui_Calculadora(object):
         sizePolicy.setHeightForWidth(self.botao_somar.sizePolicy().hasHeightForWidth())
         self.botao_somar.setSizePolicy(sizePolicy)
         self.botao_somar.setStyleSheet("font: 75 14pt \"Times New Roman\";\n"
-"background-color: rgb(85, 85, 255);")
+                                       "background-color: rgb(85, 85, 255);")
         self.botao_somar.setObjectName("botao_somar")
         self.gridLayout.addWidget(self.botao_somar, 1, 3, 1, 1)
         self.botao_igual = QtWidgets.QPushButton(self.centralwidget)
@@ -154,7 +153,7 @@ class Ui_Calculadora(object):
         sizePolicy.setHeightForWidth(self.botao_igual.sizePolicy().hasHeightForWidth())
         self.botao_igual.setSizePolicy(sizePolicy)
         self.botao_igual.setStyleSheet("font: 75 14pt \"Times New Roman\";\n"
-"background-color: rgb(85, 85, 255);")
+                                       "background-color: rgb(85, 85, 255);")
         self.botao_igual.setObjectName("botao_igual")
         self.gridLayout.addWidget(self.botao_igual, 5, 3, 1, 1)
         self.botao_4 = QtWidgets.QPushButton(self.centralwidget)
@@ -182,9 +181,9 @@ class Ui_Calculadora(object):
         sizePolicy.setHeightForWidth(self.visor.sizePolicy().hasHeightForWidth())
         self.visor.setSizePolicy(sizePolicy)
         self.visor.setStyleSheet("font: 75 28pt \"Roboto\";\n"
-"background-color: rgb(0, 0, 0);\n"
-"color: rgb(85, 0, 255);")
-        self.visor.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+                                 "background-color: rgb(0, 0, 0);\n"
+                                 "color: rgb(85, 0, 255);")
+        self.visor.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.visor.setObjectName("visor")
         self.gridLayout.addWidget(self.visor, 0, 0, 1, 4)
         self.botao_1 = QtWidgets.QPushButton(self.centralwidget)
@@ -194,16 +193,107 @@ class Ui_Calculadora(object):
         sizePolicy.setHeightForWidth(self.botao_1.sizePolicy().hasHeightForWidth())
         self.botao_1.setSizePolicy(sizePolicy)
         self.botao_1.setStyleSheet("font: 75 14pt \"Times New Roman\";\n"
-"\n"
-"")
+                                   "\n"
+                                   "")
         self.botao_1.setObjectName("botao_1")
         self.gridLayout.addWidget(self.botao_1, 2, 0, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
         Calculadora.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(Calculadora)
-        self.botao_desligar.clicked.connect(Calculadora.close) # type: ignore
+        self.botao_desligar.clicked.connect(Calculadora.close)  # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Calculadora)
+        self.botao_0.clicked.connect(self.funcao0)
+        self.botao_1.clicked.connect(self.funcao1)
+        self.botao_2.clicked.connect(self.funcao2)
+        self.botao_3.clicked.connect(self.funcao3)
+        self.botao_4.clicked.connect(self.funcao4)
+        self.botao_5.clicked.connect(self.funcao5)
+        self.botao_6.clicked.connect(self.funcao6)
+        self.botao_7.clicked.connect(self.funcao7)
+        self.botao_8.clicked.connect(self.funcao8)
+        self.botao_9.clicked.connect(self.funcao9)
+        self.botao_ponto.clicked.connect(self.funcao_ponto)
+        self.botao_somar.clicked.connect(self.funcao_soma)
+        self.botao_subtrair.clicked.connect(self.funcao_subtracao)
+        self.botao_multiplicar.clicked.connect(self.funcao_multiplicacao)
+        self.botao_dividir.clicked.connect(self.funcao_divisao)
+        self.botao_igual.clicked.connect(self.funcao_igualar)
+        self.botao_delete.clicked.connect(self.funcao_deletar)
+
+    # funções de cada botão
+    def funcao0(self):
+        text = self.visor.text()
+        self.visor.setText(text + "0")
+
+    def funcao1(self):
+        text = self.visor.text()
+        self.visor.setText(text + "1")
+
+    def funcao2(self):
+        text = self.visor.text()
+        self.visor.setText(text + "2")
+
+    def funcao3(self):
+        text = self.visor.text()
+        self.visor.setText(text + "3")
+
+    def funcao4(self):
+        text = self.visor.text()
+        self.visor.setText(text + "4")
+
+    def funcao5(self):
+        text = self.visor.text()
+        self.visor.setText(text + "5")
+
+    def funcao6(self):
+        text = self.visor.text()
+        self.visor.setText(text + "6")
+
+    def funcao7(self):
+        text = self.visor.text()
+        self.visor.setText(text + "7")
+
+    def funcao8(self):
+        text = self.visor.text()
+        self.visor.setText(text + "8")
+
+    def funcao9(self):
+        text = self.visor.text()
+        self.visor.setText(text + "9")
+
+    def funcao_ponto(self):
+        text = self.visor.text()
+        self.visor.setText(text + ".")
+
+    def funcao_soma(self):
+        text = self.visor.text()
+        self.visor.setText(text + "+")
+
+    def funcao_subtracao(self):
+        text = self.visor.text()
+        self.visor.setText(text + "-")
+
+    def funcao_multiplicacao(self):
+        text = self.visor.text()
+        self.visor.setText(text + "*")
+
+    def funcao_divisao(self):
+        text = self.visor.text()
+        self.visor.setText(text + "/")
+
+    def funcao_deletar(self):
+        text = self.visor.text()
+        self.visor.setText(text[:len(text) - 1])
+
+    def funcao_igualar(self):
+        text = self.visor.text()
+        try:
+            res = eval(text)
+            self.visor.setText(str(res))
+        except:
+            self.visor.setText("Erro na entrada!")
+
 
     def retranslateUi(self, Calculadora):
         _translate = QtCore.QCoreApplication.translate
@@ -226,11 +316,14 @@ class Ui_Calculadora(object):
         self.botao_igual.setText(_translate("Calculadora", "="))
         self.botao_4.setText(_translate("Calculadora", "4"))
         self.botao_5.setText(_translate("Calculadora", "5"))
-        self.visor.setText(_translate("Calculadora", "1"))
+        self.visor.setText(_translate("Calculadora", "0"))
         self.botao_1.setText(_translate("Calculadora", "1"))
+
+
 #import resource_qrc
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Principal = QtWidgets.QMainWindow()
     ui = Ui_Calculadora()
