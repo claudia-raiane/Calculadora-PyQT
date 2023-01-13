@@ -311,6 +311,7 @@ class Ui_Calculadora(object):
         self.botao_multiplicar.setText(_translate("Calculadora", "x"))
         self.botao_multiplicar.setShortcut(_translate("Calculadora", "*"))
         self.botao_clear.setText(_translate("Calculadora", "Clear"))
+        self.botao_clear.setShortcut(_translate("Calculadora", "Ctrl+l"))
         self.botao_3.setText(_translate("Calculadora", "3")) 
         self.botao_3.setShortcut(_translate("Calculadora", "3"))
         self.botao_ponto.setText(_translate("Calculadora", "."))
